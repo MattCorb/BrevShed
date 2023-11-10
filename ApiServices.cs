@@ -20,7 +20,6 @@ public class APIService
 
     public async Task<bool> StartSystem()
     {
-        Console.WriteLine(_baseUrl);
         HttpResponseMessage response = await _httpClient.PostAsync($"{_baseUrl}/api/Scheduling/Start?token={_token}", null);
         if (response.IsSuccessStatusCode){
             return true;

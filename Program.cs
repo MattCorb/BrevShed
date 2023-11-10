@@ -8,8 +8,6 @@ DotNetEnv.Env.Load("C:\\Users\\matth\\Documents\\PesonalCode\\Brevium_interview\
 string apiKey = DotNetEnv.Env.GetString("API_KEY");
 string baseURL = DotNetEnv.Env.GetString("BASE_URL");
 
-Console.WriteLine(apiKey + " " + baseURL);
-
 //connect to db and truncate the table
 using var db = new AppointmentContext();
 db.TruncateAppointments();
